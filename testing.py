@@ -6,8 +6,6 @@ import finnhub
 import datetime
 from pytz import timezone
 
-apiKey = "c80sj5aad3ie5egte3hg"
-
 contents = {
 	"AAPL" : 50.0,
 	"ACHR" : 100.0,
@@ -125,7 +123,9 @@ if __name__ == "__main__":
 	GPIO.setup(greenPin, GPIO.OUT)
 	GPIO.setup(redPin, GPIO.OUT)
 
-	finnhub_client = finnhub.Client(api_key="c80sj5aad3ie5egte3hg")
+	finnhubKey = keyManager.grabKey("Stocks")
+
+	finnhub_client = finnhub.Client(api_key=finnhubKey)
 
 	onlyBlue()	
 

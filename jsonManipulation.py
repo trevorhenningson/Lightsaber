@@ -89,6 +89,8 @@ def writeKeyFile(fileName):
 	f.write(jsonKeys)
 	f.close()
 
+
+
 if __name__ == "__main__":
 	response = yesNoPrompt("Would you like to create an API Key File?")
 
@@ -110,7 +112,6 @@ if __name__ == "__main__":
 		"SLB" : 350.0, 
 	}
 
-	createStockFile(stockData = myStockData, fileName = "stocks.json")
 
 
 
